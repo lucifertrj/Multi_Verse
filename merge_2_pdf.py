@@ -1,10 +1,11 @@
 from os import read
 import tkinter as tk
 from tkinter import messagebox as msg,filedialog as fd
+from typing import final
 import PyPDF2
 
 def upload_file():
-    global reader1
+    global reader1,save_as
     try:
         pdf1 = fd.askopenfile()
         #the image file uploaded from filedialog can be extracted using img.name
@@ -46,15 +47,15 @@ def mergeing():
             else:
                 output = output+'.pdf'
 
-            output_file = open(output,'wb')
+            output_file = open("{}{}".format(save_as,output),'wb')
             writer.write(output_file)
             msg.showinfo("Merge Successful","PDF Saved")
+            output_file.close()
 
     except NameError:
         msg.showerror("Invalid","Select PDF First")
     except TypeError:
         msg.showerror("File Unknown","Select Valid PDF first")
-
 
 def main(screen):
     screen.geometry("435x435+150+180")

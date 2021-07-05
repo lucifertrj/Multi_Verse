@@ -36,14 +36,14 @@ def save():
         if len(output) == 0:
             msg.showerror("Invalid","Enter Name")
         else:
-            if output[-4:] in ['.png','.jpeg','.bmp','.tiff']:
+            if output[-4:] in ['.png','jpeg','.jpg','.bmp','.tiff']:
                 pass
-            elif output[-4:0] == '.jpg':
-                output = output[-4:0]+'.jpeg'
             else:
                 output = output+'.png'
             img.save(output)
             msg.showinfo("Downloaded","Image Saved")
+            img.close()
+            finalized.close()
     except NameError:
         msg.showerror("Invalid","Select Image and Logo First")
     except TypeError:

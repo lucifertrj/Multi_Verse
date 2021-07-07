@@ -1,2 +1,2 @@
 # multi-taker-saviour
-One local platform to satisfy remote deeds
+One local platform to satisfy multiple remote deeds

@@ -62,7 +62,7 @@ def main(screen):
     upload_logo = tk.Button(screen,text="Select Logo",font=("arial",14,"bold"),bg="blue",fg="white",bd=5,command=upload_file).place(x=128,y=125,width=190,height=50)
     upload_image = tk.Button(screen,text="Select Image",font=("arial",14,"bold"),bg="blue",fg="white",bd=5,command=upload_file1).place(x=128,y=195,width=190,height=50)
 
-    lbl = tk.Label(screen,text="Save File As:",font=("arial",14,"bold"),fg="black",bg="white").place(x=65,y=270)
+    lbl = tk.Label(screen,text="Save File:",font=("arial",14,"bold"),fg="black",bg="white").place(x=65,y=270)
 
     global name
     name=tk.Entry(screen,bg="pink",fg="black",font=('arial',13,"bold"),bd=5)

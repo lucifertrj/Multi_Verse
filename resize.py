@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox as msg,filedialog as fd
 import cv2
-import random,string
 
 def upload_file():
     global image
